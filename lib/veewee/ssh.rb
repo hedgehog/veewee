@@ -166,6 +166,7 @@ module Veewee
         ssh_options[:keys] = Array.new([File.join(File.dirname(__FILE__),'./../../validation/vagrant')])
         ssh_options.delete(:password)
         ssh_options[:auth_methods] = ['publickey']
+        ssh_options[:user_known_hosts_file] = '/dev/null'
         if @key_auth_tried
            raise
         else
