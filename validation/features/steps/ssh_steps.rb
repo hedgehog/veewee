@@ -91,6 +91,7 @@ When /^I ssh to "([^\"]*)" with the following credentials:$/ do |hostname, table
     rescue Net::SSH::Disconnect, Errno::ECONNREFUSED, Errno::EHOSTUNREACH, Errno::ECONNABORTED, Errno::ECONNRESET, Errno::ENETUNREACH
       sleep 5
     end
+    end
   }.should_not raise_error
 end
 
